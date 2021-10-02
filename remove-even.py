@@ -1,5 +1,6 @@
 
 #remove all the even entries in the list
+#trial 
 
 def remove_even(lst):
     # Write your code here!

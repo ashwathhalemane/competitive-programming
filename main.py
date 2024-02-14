@@ -27,9 +27,25 @@ class TopVotedCandidate:
         for time_interval in range(range_value+1):
             # zeros = 0
             output_array.append(persons[time_interval])
-        print(output_array) 
+        # print(output_array) 
+        last_element = output_array[len(output_array)-1]
         
-           
+        for each_element_in_zero_one_array in output_array:
+            zeroes = 0
+            ones = 0
+            
+            
+            if output_array[each_element_in_zero_one_array] == 0:
+                zeroes+=1
+            if output_array[each_element_in_zero_one_array] == 1:
+                ones+=1
+            
+        if zeroes > ones:
+            return 0
+        elif ones > zeroes:
+            return 1
+        else:
+            return last_element     
             # ones  = 0
             # last_so_far = persons[range_value]
             # if persons[time_interval] == 0:
@@ -50,7 +66,7 @@ persons = [0, 1, 1, 0, 0, 1, 0]
 times = [0, 5, 10, 15, 20, 25, 30]
 obj = TopVotedCandidate(persons, times)
 
-for time in [12, 25]:
+for time in [3, 12, 25, 15, 24, 8]:
     param_1 = obj.q(time)
     print(param_1)
 

@@ -8,7 +8,7 @@
 #     TopVotedCandidate(int[] persons, int[] times) Initializes the object with the persons and times arrays.
 #     int q(int t) Returns the number of the person that was leading the election at time t according to the mentioned rules.
 
-
+# runtime error on append function at line number 29 
 class TopVotedCandidate:
     
     def __init__(self, persons, times):
